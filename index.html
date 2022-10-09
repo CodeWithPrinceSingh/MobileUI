@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        .main{
+            width: 450px;
+            height: 891px;
+            
+        }
+        .screen{
+            width: 390px;
+            height: 850px;
+            background:black;
+            border-radius: 40px;
+            box-shadow: 1px 1px 10px 2px black;
+            border: 15px solid black;
+            cursor: pointer;
+            background-size: cover;
+        
+        justify-content: center;
+            position: absolute;
+            top: 4px;
+            left: 20px;
+            transition: 0.5s;
+        }
+        .nav{
+            width: 100%;
+            height: 50px;
+            display: flex;
+        }
+        .black{
+            width: 180px;
+            height: 30px;
+            background-color: rgb(3, 2, 0);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            display: flex;
+            justify-content: center;
+            
+            
+        }
+        .time{
+            width: 107px;
+            height: 40px;
+            position: relative;
+            top: 2px;
+            left: 10px;
+            font-size: 22px;
+        }
+        .cam{
+          width: 20px;
+          height: 20px;
+          background-color: white;
+          border-radius: 50%;
+          position: relative;
+          top: 0px;
+        }
+        .battry{
+            width: 107px;
+            height: 40px;
+            position: relative;
+            top: 2px;
+            font-size: 22px;
+            left: 40px;
+            display: flex;
+           
+        }
+        .icon{
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            position: relative;
+            top: 2px;
+            
+        }
+        .footer{
+            width: 86%;
+            height: 50px;
+            position: relative;
+            top: 751px;
+            display: flex;
+            border-radius: 10px;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .back{
+            width: 80px;
+    font-size: 35px;
+    font-weight: 900;
+    position: relative;
+    left: 20px;
+        }
+        .home{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+           border: 3px solid black;
+        }
+        .clean{
+            width: 20px;
+            height: 20px;
+        border-radius: 4px;
+            border: 3px solid black;
+            position: relative;
+    left: 40px;
+        }
+        .locktime{
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 43px;
+            top: 179px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+        }
+        .hour{
+            font-size: 200px;
+            position: relative;
+            top: 10px;
+            color: white;
+        }
+        .mintus{
+            font-size: 200px;
+            position: relative;
+            top: -50px;
+            color: white;
+        }
+        .date{
+            font-size: 40px;
+            position: relative;
+            top: -80px;   
+            color: blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="screen" onmouseenter="onmousein()" onmouseleave="mouseleave()">
+           <div class="nav">
+            <div class="time">01:45 PM</div>
+            <div class="black">
+                <div class="cam"></div>
+            </div>
+            <div class="battry"><div class="icon"></div>65%</div>
+           </div>
+           <div class="footer">
+            <div class="back"><</div>
+            <div class="home"></div>
+            <div class="clean"></div>
+           </div> 
+           <div class="locktime">
+            <a class="hour">01</a>
+            <a class="mintus">45</a>
+            <a class="date">10/09 Sun</a>
+        </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    
+   function onmousein(){
+    document.querySelector('.screen').style.background="url('mobile.jpg')";
+    document.querySelector('.screen').style.backgroundSize="cover";
+    document.querySelector('.locktime').style.display="none";
+}
+   function mouseleave(){
+    document.querySelector('.screen').style.background="black";
+    document.querySelector('.locktime').style.display="flex";
+   }
+
+
+</script>
+</html>
